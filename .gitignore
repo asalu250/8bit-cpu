@@ -1,0 +1,19 @@
+# Quartus temporary directories & outputs
+db/
+incremental_db/
+output_files/
+simulation/
+
+# Temporary and build artifacts
+*.qws
+*.rpt
+*.summary
+*.smsg
+*.done
+*.jdi
+*.pin
+*.pof
+*.sof
+*.bsf
+*.bak
+dump.vcd
