@@ -1,4 +1,5 @@
-8-bit CPU Verilog Design
-• Designing and implementing an 8-bit CPU in Verilog including ALU, register file, instruction memory, and control unit.
-• Targeting synthesis and deployment on Intel DE10-Lite FPGA using Quartus Prime for simulation.
-• Implementing a fetch-decode-execute pipeline with 8 core instructions and register-based architecture.
+8-Bit CPU in Verilog
+
+A custom 8-bit single-cycle CPU designed from scratch in Verilog, synthesized and verified on an Intel DE10-Lite FPGA (MAX 10) using Quartus Prime.
+
+<img src="media/demo.gif" alt="Demo GIF" width="500"/>
