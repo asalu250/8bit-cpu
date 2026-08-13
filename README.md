@@ -36,13 +36,13 @@ This is a 2-address format with the destination register doubling as one of the 
 | `110/111` | *(reserved)* | - | No operation (safe default) |
 
 ### Features
-• Single-cycle fetch-decode-execute architecture
-• 4 general 8-bit registers (R0-R3)
-• 16-word instruction memory (ROM)
-• Dual-port combinational register reads, gated synchronous writes
-• ALU supporting ADD/SUB/AND/OR with zero and carry-out flags
-• Real-time output on physical LEDs and 7-segment hex displays
-• Every module independently verified with a self-checking testbench
+* Single-cycle fetch-decode-execute architecture
+* 4 general 8-bit registers (R0-R3)
+* 16-word instruction memory (ROM)
+* Dual-port combinational register reads, gated synchronous writes
+* ALU supporting ADD/SUB/AND/OR with zero and carry-out flags
+* Real-time output on physical LEDs and 7-segment hex displays
+* Every module independently verified with a self-checking testbench
 
 ### Bugs Found and Fixed
 
