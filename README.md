@@ -30,7 +30,7 @@ This is a 2-address format with the destination register doubling as one of the 
 | `000` | **HALT/NOP** | - | No operation, PC freezes |
 | `001` | **ADD** | `ADD Rd, Rs` | $Rd \leftarrow Rd + Rs$ |
 | `010` | **SUB** | `SUB Rd, Rs` | $Rd \leftarrow Rd - Rs$ |
-| `011` | **AND** | `AND Rd, Rs` | $Rd \leftarrow Rd ~\&~ Rs$ |
+| `011` | **AND** | `AND Rd, Rs` | $Rd \leftarrow Rd \\&\ Rs$ |
 | `100` | **OR** | `OR Rd, Rs` | $Rd \leftarrow Rd \mid Rs$ |
 | `101` | **LOAD** | `LOAD Rd, #imm` | $Rd \leftarrow \text{immediate}$ |
 | `110/111` | *(reserved)* | - | No operation (safe default) |
