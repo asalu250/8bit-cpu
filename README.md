@@ -30,7 +30,7 @@ This is a 2-address format with the destination register doubling as one of the 
 | `000` | **HALT/NOP** | - | No operation, PC freezes |
 | `001` | **ADD** | `ADD Rd, Rs` | $Rd \leftarrow Rd + Rs$ |
 | `010` | **SUB** | `SUB Rd, Rs` | $Rd \leftarrow Rd - Rs$ |
-| `011` | **AND** | `AND Rd, Rs` | $Rd \leftarrow Rd \\&\ Rs$ |
+| `011` | **AND** | `AND Rd, Rs` | $Rd \leftarrow Rd \\ &\ Rs$ |
 | `100` | **OR** | `OR Rd, Rs` | $Rd \leftarrow Rd \mid Rs$ |
 | `101` | **LOAD** | `LOAD Rd, #imm` | $Rd \leftarrow \text{immediate}$ |
 | `110/111` | *(reserved)* | - | No operation (safe default) |
@@ -59,18 +59,23 @@ Fix: added an is_halt signal from the control unit and gated the program counter
 Each module has an independent, self-checking testbench (Icarus Verilog):
 
 #ALU
+
 iverilog -o alu_sim rtl/alu.v sim/alu_tb.v && vvp alu_sim
 
 #Register file
+
 iverilog -o regfile_sim rtl/regfile.v sim/regfile_tb.v && vvp regfile_sim
 
 #Instruction memory
+
 iverilog -o instr_mem_sim rtl/instr_mem.v sim/instr_mem_tb.v && vvp instr_mem_sim
 
 #Control unit
+
 iverilog -o control_unit_sim rtl/control_unit.v sim/control_unit_tb.v && vvp control_unit_sim
 
 #Full CPU integration
+
 iverilog -o cpu_top_sim rtl/alu.v rtl/regfile.v rtl/instr_mem.v \
   rtl/control_unit.v rtl/cpu_top.v sim/cpu_top_tb.v && vvp cpu_top_sim
 
