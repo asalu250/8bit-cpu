@@ -89,15 +89,15 @@ Waveform showing the CPU executing its test program: the program counter steps t
 
 ### Test Results
 
-PASS [ADD]: a=10 b=20 opcode=0 -> result=30
-PASS [SUB]: a=30 b=10 opcode=1 -> result=20
-PASS [AND]: a=170 b=204 opcode=10 -> result=136
-PASS [OR]: a=170 b=204 opcode=11 -> result=238
-PASS [ZERO FLAG]: zero correctly high on result=0
-PASS [CARRY OUT]: carry_out correctly high on overflow
+PASS [ADD]: a=10 b=20 opcode=0 -> result=30. 
+PASS [SUB]: a=30 b=10 opcode=1 -> result=20. 
+PASS [AND]: a=170 b=204 opcode=10 -> result=136. 
+PASS [OR]: a=170 b=204 opcode=11 -> result=238. 
+PASS [ZERO FLAG]: zero correctly high on result=0. 
+PASS [CARRY OUT]: carry_out correctly high on overflow  
 
-ALL TESTS PASSED
-PASS: R0 = 8 (expected 8, from 5+3)
+ALL TESTS PASSED. 
+PASS: R0 = 8 (expected 8, from 5+3). 
 R1 = 3 (expected 3)
 
 Full-system testbench additionally runs 2 extra clock cycles past the program's end, into unused instruction memory, to confirm the HALT/NOP safety fix holds under real operating conditions; R0 correctly stays at 8 rather than being corrupted.
